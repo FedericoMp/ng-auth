@@ -1,0 +1,157 @@
+{
+	"info": {
+		"_postman_id": "9e40eb19-60b3-4b12-aed0-8c5d7db8a8aa",
+		"name": "ng-auth",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "/events",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{api}}/events",
+					"host": [
+						"{{api}}"
+					],
+					"path": [
+						"events"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/event/:id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{api}}/event/1",
+					"host": [
+						"{{api}}"
+					],
+					"path": [
+						"event",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/event/create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"event name x\",\r\n    \"description\": \"event description x...\",\r\n    \"date\": \"2019-10-21T15:15:23.000Z\",\r\n    \"image\": \"event/image/path x...\"\r\n}"
+				},
+				"url": {
+					"raw": "{{api}}/event/create",
+					"host": [
+						"{{api}}"
+					],
+					"path": [
+						"event",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/event/update/:id",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"event name 2 updated\",\r\n    \"description\": \"event description updated...\",\r\n    \"date\": \"2019-10-21T15:15:23.000Z\",\r\n    \"image\": \"event/image/path updated...\"\r\n}"
+				},
+				"url": {
+					"raw": "{{api}}/event/update/2",
+					"host": [
+						"{{api}}"
+					],
+					"path": [
+						"event",
+						"update",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/event/delete/:id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{api}}/event/delete/3",
+					"host": [
+						"{{api}}"
+					],
+					"path": [
+						"event",
+						"delete",
+						"3"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "06d76856-3060-4634-b0bb-ace98865ddfd",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "59a348d3-f84a-4390-85c6-576a228dd956",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "11d0e60c-3342-4e1f-89ef-feacb454a993",
+			"key": "api",
+			"value": "http://localhost:3000/api",
+			"type": "string"
+		}
+	]
+}
