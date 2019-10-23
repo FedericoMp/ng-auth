@@ -1,12 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-// const {getEvents, getEvent, createEvent, updateEvent, deleteEvent} = require('../controller/eventsCtrl');
-const {getEvents} = require('../controller/eventsCtrl/getEvents');
-const {getEvent} = require('../controller/eventsCtrl/getEvent');
-const {createEvent} = require('../controller/eventsCtrl/createEvent');
-const {updateEvent} = require('../controller/eventsCtrl/updateEvent');
-const {deleteEvent} = require('../controller/eventsCtrl/deleteEvent');
+const {getEvents, getEvent, createEvent, updateEvent, deleteEvent} = require('../controller/eventsCtrl');
 
 router.get('/events', getEvents);
 router.get('/event/:id', getEvent);

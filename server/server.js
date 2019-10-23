@@ -3,11 +3,12 @@ const bodyParser = require('body-parser');
 const main = require('./routes');
 const events = require('./routes/events');
 
-const PORT = 3000;
+const port = parseInt(process.env.PORT, 10) || 3000;
 const app = express();
 
-app.set('port', process.env.PORT || 3000);
+app.set('port', port);
 app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
 
 app.get('', (req, res) => res.redirect('/api'));
 app.use('/api', main);
